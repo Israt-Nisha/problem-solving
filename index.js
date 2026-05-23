@@ -186,6 +186,11 @@ function countOccurrences(s, c) {
   return count;
 }
 
+function pagination(items, pageSize, pageNumber) {
+  const startIndex = (pageNumber - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  return items.slice(startIndex, endIndex);
+}
 
 
 
