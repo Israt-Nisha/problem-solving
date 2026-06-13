@@ -194,5 +194,9 @@ function countOccurrences(s, c) {
 
 
 
-
+function reverseWords(s) {
+  const words = s.split(' ');
+  const reversedWords = words.reverse();
+  return reversedWords.join(' ');
+} 
 
