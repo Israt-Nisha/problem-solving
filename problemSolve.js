@@ -23,4 +23,27 @@ function isEven(n) {
     
 }
 
-isEven(10);
+// isEven(10);
+
+// Problem 3: Find the Largest of Three Numbers  [Easy]
+// Description: Write a function largest(a, b, c) that returns the largest of three numbers.
+// Example:
+// Input: 3, 7, 5  → Output: 7
+// Hint: Use Math.max() or if-else conditions.
+
+function largest(a, b, c){
+    if (a > b && a > c) {
+        console.log(a);
+    } else if (b > a && b > c) {
+        console.log(b);
+    } else {
+        console.log(c);
+    }
+}
+
+largest(3, 7, 5);
+
+function largest(a, b, c) {
+    let max = Math.max(a, b, c);
+    console.log(max);
+}
