@@ -47,3 +47,23 @@ function largest(a, b, c) {
     let max = Math.max(a, b, c);
     console.log(max);
 }
+
+// Problem 5: Check Positive, Negative or Zero  [Easy]
+// Description: Write a function checkSign(n) that returns 'positive', 'negative', or 'zero' based on the value of n.
+// Example:
+// Input: -5  → Output: 'negative'Input: 0   → Output: 'zero'
+// Hint: Use if-else if-else statements.
+
+function checkSign(n) {
+    if (n > 0) {
+        console.log('positive');
+    } else if (n < 0) {
+        console.log('negative');
+    } else {
+        console.log('zero');
+    }      
+}
+
+checkSign(-5);
+checkSign(0);
+checkSign(10);
