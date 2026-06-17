@@ -4,7 +4,7 @@ function swap(a,b) {
 }
 
 let result = swap(5, 10);
-console.log(result);
+// console.log(result);
 
 // Problem 2: Check Even or Odd  [Easy]
 // Description: Write a function isEven(n) that returns true if a number is even, and false if it is odd.
@@ -41,7 +41,7 @@ function largest(a, b, c){
     }
 }
 
-largest(3, 7, 5);
+// largest(3, 7, 5);
 
 function largest(a, b, c) {
     let max = Math.max(a, b, c);
@@ -64,6 +64,29 @@ function checkSign(n) {
     }      
 }
 
-checkSign(-5);
-checkSign(0);
-checkSign(10);
+// checkSign(-5);
+// checkSign(0);
+// checkSign(10);
+
+// Problem 9: Capitalize First Letter of Each Word  [Easy]
+// Description: Write a function titleCase(str) that capitalizes the first letter of every word in a string.
+// Example:
+// Input: 'hello world'  → Output: 'Hello World'
+// row for of or for in loop using
+
+function titleCase(str) {
+    let words = str.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    return words.join(' ');
+}
+
+// function titleCasev2(str) {
+//     return str
+//         .split(" ")
+//         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//         .join(" ");
+// }
+
+console.log(titleCase("hello world"));
