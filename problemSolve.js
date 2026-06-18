@@ -89,4 +89,20 @@ function titleCase(str) {
 //         .join(" ");
 // }
 
-console.log(titleCase("hello world"));
+// console.log(titleCase("hello world"));
+
+// Problem 10: Count Occurrences of a Character  [Easy]
+// Description: Write a function countChar(str, char) that returns how many times a character appears in a string.
+// Example:
+// Input: 'banana', 'a'  → Output: 3
+
+function countChar(str, char) {
+    let count = 0;  
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            count++;
+        }   
+    }
+    return count;
+}
+console.log(countChar("banana", "a"));
