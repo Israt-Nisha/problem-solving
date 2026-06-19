@@ -105,4 +105,18 @@ function countChar(str, char) {
     }
     return count;
 }
-console.log(countChar("banana", "a"));
+// console.log(countChar("banana", "a"));
+
+function removeDuplicates(arr) {
+  let uniqueArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArray.includes(arr[i])) {
+      uniqueArray.push(arr[i]);
+    }
+  }
+
+  return uniqueArray;
+}
+
+console.log(removeDuplicates([1, 2, 2, 3, 3, 4,5]));
