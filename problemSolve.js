@@ -163,4 +163,20 @@ function chunkArray(arr, size) {
   return result;
 }
 
-console.log(chunkArray([1, 2, 3, 4, 5], 2));
+// console.log(chunkArray([1, 2, 3, 4, 5], 2));
+
+// Problem 16: Count Object Properties  [Easy]
+// Description: Write a function countProperties(obj) that returns the number of properties in an object.
+// Example:
+// Input: {a: 1, b: 2, c: 3}  → Output: 3
+
+function countProperties(obj) {
+    let count = 0;
+    for (let key in obj){
+        count++;
+    }
+    return count;
+}
+ 
+
+console.log(countProperties({a: 1, b: 2, c: 3, d: 4}));
