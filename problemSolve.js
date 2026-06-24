@@ -193,4 +193,15 @@ function mergeObjects(obj1, obj2) {
   return Object.assign({}, obj1, obj2);
 }
 
-console.log(mergeObjects({a:1}, {b:2}));
+// console.log(mergeObjects({a:1}, {b:2}));
+
+// Description: Write a function invertObject(obj) that swaps the keys and values of an object.
+function invertObject(obj) {
+    let inverted = {};  
+    for (let key in obj) {
+        inverted[obj[key]] = key;
+    }
+    return inverted;
+}       
+
+console.log(invertObject({a: 1, b: 2})); // Output: {1: 'a', 2: 'b', 3: 'c'}
