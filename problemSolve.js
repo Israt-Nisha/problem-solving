@@ -211,37 +211,37 @@ function invertObject(obj) {
 // Input: [{name:'Ali'},{name:'Sara'},{name:'Ali'}]Output: ['Ali']
 // Hint: Use a frequency map (object) to count occurrences.
 
-// function findDuplicateNames(arr) {
-//   let count = {};
-//   let duplicates = [];
-
-//   for (let i = 0; i < arr.length; i++) {
-//     let name = arr[i].name;
-
-//     if (count[name]) {
-//       count[name]++;
-//     } else {
-//       count[name] = 1;
-//     }
-//   }
-
-//   for (let name in count) {
-//     if (count[name] > 1) {
-//       duplicates.push(name);
-//     }
-//   }
-
-//   return duplicates;
-// }
-
 function findDuplicateNames(arr) {
-  const count = arr.reduce((acc, obj) => {
-    acc[obj.name] = (acc[obj.name] || 0) + 1;
-    return acc;
-  }, {});
+  let count = {};
+  let duplicates = [];
 
-  return Object.keys(count).filter(name => count[name] > 1);
+  for (let i = 0; i < arr.length; i++) {
+    let name = arr[i].name;
+
+    if (count[name]) {
+      count[name]++;
+    } else {
+      count[name] = 1;
+    }
+  }
+
+  for (let name in count) {
+    if (count[name] > 1) {
+      duplicates.push(name);
+    }
+  }
+
+  return duplicates;
 }
+
+// function findDuplicateNames(arr) {
+//   const count = arr.reduce((acc, obj) => {
+//     acc[obj.name] = (acc[obj.name] || 0) + 1;
+//     return acc;
+//   }, {});
+
+//   return Object.keys(count).filter(name => count[name] > 1);
+// }
 const users = [
   { name: "Ali" },
   { name: "Sara" },
