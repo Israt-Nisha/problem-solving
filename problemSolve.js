@@ -294,4 +294,29 @@ function fibonacci(n) {
 }
 
 
-console.log(fibonacci(6)); 
+// console.log(fibonacci(6)); 
+
+// map() Higher Order Method
+
+function debounce(fn, delay) {
+  let timer;
+
+  return function (...args) {
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+function search(text) {
+  console.log("Searching:", text);
+}
+
+const debouncedSearch = debounce(search, 300);
+
+debouncedSearch("H");
+debouncedSearch("He");
+debouncedSearch("Hel");
+debouncedSearch("Hello");
