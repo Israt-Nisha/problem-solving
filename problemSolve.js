@@ -316,7 +316,38 @@ function search(text) {
 
 const debouncedSearch = debounce(search, 300);
 
-debouncedSearch("H");
-debouncedSearch("He");
-debouncedSearch("Hel");
-debouncedSearch("Hello");
+// debouncedSearch("H");
+// debouncedSearch("He");
+// debouncedSearch("Hel");
+// debouncedSearch("Hello");
+
+
+function makeCounter() {
+  let count = 0;
+
+  return {
+    increment: function () {
+      count++;
+    },
+
+    decrement: function () {
+      count--;
+    },
+
+    getCount: function () {
+      return count;
+    }
+  };
+}
+
+
+const c = makeCounter();
+
+c.increment();
+c.increment();
+
+console.log(c.getCount()); 
+
+c.decrement();
+
+console.log(c.getCount()); 
