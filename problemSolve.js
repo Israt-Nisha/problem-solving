@@ -370,4 +370,28 @@ function curry(fn) {
 
 const add = curry((a, b) => a + b);
 
-console.log(add(2)(3)); // 5
+// console.log(add(2)(3)); // 5
+
+
+function throttle(fn, limit) {
+
+    let lastCall = 0;
+
+    return function (...args) {
+
+        const now = Date.now();
+
+        if (now - lastCall >= limit) {
+
+            lastCall = now;
+
+            fn(...args);
+
+        }
+
+    };
+
+}
+
+const throttledSearch = throttle(search, 1000);
+console.log(throttledSearch("H"));
