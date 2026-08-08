@@ -373,25 +373,25 @@ const add = curry((a, b) => a + b);
 // console.log(add(2)(3)); // 5
 
 
-// function throttle(fn, limit) {
+function throttle(fn, limit) {
 
-//     let lastCall = 0;
+    let lastCall = 0;
 
-//     return function (...args) {
+    return function (...args) {
 
-//         const now = Date.now();
+        const now = Date.now();
 
-//         if (now - lastCall >= limit) {
+        if (now - lastCall >= limit) {
 
-//             lastCall = now;
+            lastCall = now;
 
-//             fn(...args);
+            fn(...args);
 
-//         }
+        }
 
-//     };
+    };
 
-// }
+}
 
-// const throttledSearch = throttle(search, 1000);
-// console.log(throttledSearch("H"));
+const throttledSearch = throttle(search, 1000);
+console.log(throttledSearch("H"));
